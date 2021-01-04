@@ -1,5 +1,6 @@
 package io.ducky.javabrainsdemo.topic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,10 +10,12 @@ import org.springframework.stereotype.Service;
 public class TopicService {
 
 	// this happens to be a static initialization block
-	private List<Topic> topics = Arrays.asList(
+	private List<Topic> topics = new ArrayList<>(
+		Arrays.asList(
 			new Topic("spring", "spring framework", "yada yada 1"),
 			new Topic("java", "core java", "yada yada 2"),
 			new Topic("js", "shitcake", "yada yada 3")
+		)
 	);
 	
 	public List<Topic> getAllTopics() {
@@ -32,5 +35,9 @@ public class TopicService {
 		catch(Exception e) {
 			return new Topic("topic", "wasn't", "found");
 		}
+	}
+	
+	public void addTopic(Topic topic) {
+		topics.add(topic);
 	}
 }

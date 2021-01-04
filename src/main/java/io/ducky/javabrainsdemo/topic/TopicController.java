@@ -28,7 +28,14 @@ public class TopicController {
 	@RequestMapping(value = "/topics", method = RequestMethod.POST)
 	public void addTopic(@RequestBody Topic topic) {
 		topicService.addTopic(topic);
-		getAllTopics();
+		
+		/* tried a bunch of the following stuff for redirects - none work
+		 *
+		 * getAllTopics();
+		 * return "redirect:/topics";
+		 * new HttpServletResponse.sendRedirect("/topics");
+		 *
+		 */
 	}
 	
 }

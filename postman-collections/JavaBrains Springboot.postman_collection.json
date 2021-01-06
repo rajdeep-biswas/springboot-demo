@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "353a0f7e-7ef2-46ea-91df-ec41b279d59e",
+		"name": "JavaBrains Springboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUT (update topic)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"tyke\",\r\n    \"name\": \"tide\",\r\n    \"desc\": \"retard\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/topics/pipe",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"pipe"
+					]
+				},
+				"description": "/topics/{id to be replaced}\r\n\r\nRequestBody - same as POST"
+			},
+			"response": []
+		},
+		{
+			"name": "POST (add new topic)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"scripting\",\r\n    \"desc\": \"gods\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/topics/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						""
+					]
+				},
+				"description": "*Request Body* should be 'raw' and JSON formatted.\r\nAlso a *Header* of Content-Type: application/json has to be provided to specify what to expect."
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE (delete topic)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/topics/js",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"js"
+					]
+				},
+				"description": "duh"
+			},
+			"response": []
+		}
+	]
+}

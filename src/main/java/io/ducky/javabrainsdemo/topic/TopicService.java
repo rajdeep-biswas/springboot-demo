@@ -26,10 +26,10 @@ public class TopicService {
 		/*
 		 *  added the try-catch block so it doesn't return
 		 *  a Whitelabel error page when invalid topic ID is entered.
-		 *  can try a better alternative with a redirect in the TopicController class, later
+		 *  can try a better alternative with a redirect in the TopicController class, later.
 		 */
 		try {
-			// this syntax, god damn
+			// this syntax, god damn.
 			return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
 		}
 		catch(Exception e) {
@@ -43,9 +43,9 @@ public class TopicService {
 
 	public void updateTopic(Topic topic, String id) {
 		/*
-		 *  dude used vanilla for loop and used topics.set(index, topic), i said no
+		 *  dude used vanilla for loop and used topics.set(index, topic), i said no.
 		 *  although it's not the same result anymore, old topic gets yeeted
-		 *  and everyhing below it moves up by 1 index and updated topic gets added at last
+		 *  and everyhing below it moves up by 1 index and updated topic gets added at last.
 		 */
 		for(Topic tapic: topics) {
 			if(tapic.getId().equals(id)) {
@@ -55,8 +55,34 @@ public class TopicService {
 			}
 		}
 		
-		// this shouldn't be a sysout but a spring logger
+		// this shouldn't be a sysout but a spring logger.
 		System.out.println("Topic " + id + " wasn't found.");
 		
+	}
+
+	public void deleteTopic(String id) {
+		
+		for(Topic topic: topics) {
+			if(topic.getId().equals(id)) {
+				topics.remove(topic);
+				return;
+				
+				/* 
+				 * interesting: ConcurrentModificationException.
+				 * i initally had thought of not keeping the return statement in order for
+				 * the implementation to delete every occurrence but that throws an exception.
+				 */
+			}
+		}
+		
+		/*
+		 *  note: dude uses -
+		 *  topics.removeIf(t -> t.getId().equals(id))
+		 *  which was a suggestion on the Baeldung article.
+		 *  appears as if Java 8 introduced this solely to tackle the exception usecase
+		 */
+		
+		// this again shouldn't be a sysout but a spring logger.
+		System.out.println("Topic " + id + " wasn't found.");
 	}
 }

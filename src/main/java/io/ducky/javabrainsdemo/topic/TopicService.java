@@ -55,5 +55,8 @@ public class TopicService {
 			}
 		}
 		
+		// this shouldn't be a sysout but a spring logger
+		System.out.println("Topic " + id + " wasn't found.");
+		
 	}
 }

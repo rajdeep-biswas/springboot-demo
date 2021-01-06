@@ -79,7 +79,8 @@ public class TopicService {
 		 *  note: dude uses -
 		 *  topics.removeIf(t -> t.getId().equals(id))
 		 *  which was a suggestion on the Baeldung article.
-		 *  appears as if Java 8 introduced this solely to tackle the exception usecase
+		 *  appears as if Java 8 introduced this solely to tackle the exception usecase.
+		 *  oh, and this also removes all occurences (and not just the first).
 		 */
 		
 		// this again shouldn't be a sysout but a spring logger.

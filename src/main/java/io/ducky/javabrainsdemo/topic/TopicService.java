@@ -40,4 +40,20 @@ public class TopicService {
 	public void addTopic(Topic topic) {
 		topics.add(topic);
 	}
+
+	public void updateTopic(Topic topic, String id) {
+		/*
+		 *  dude used vanilla for loop and used topics.set(index, topic), i said no
+		 *  although it's not the same result anymore, old topic gets yeeted
+		 *  and everyhing below it moves up by 1 index and updated topic gets added at last
+		 */
+		for(Topic tapic: topics) {
+			if(tapic.getId().equals(id)) {
+				topics.remove(tapic);
+				topics.add(topic);
+				return;
+			}
+		}
+		
+	}
 }

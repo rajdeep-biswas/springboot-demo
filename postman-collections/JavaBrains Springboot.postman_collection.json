@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"tyke\",\r\n    \"name\": \"tide\",\r\n    \"desc\": \"retard\"\r\n}",
+					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"tide\",\r\n    \"descr\": \"retard\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -26,14 +26,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/topics/pipe",
+					"raw": "localhost:8080/topics/",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"topics",
-						"pipe"
+						""
 					]
 				},
 				"description": "/topics/{id to be replaced}\r\n\r\nRequestBody - same as POST"
@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"scripting\",\r\n    \"descr\": \"gods\"\r\n}",
+					"raw": "{\r\n    \"id\": \"spring\",\r\n    \"name\": \"enterprise\",\r\n    \"descr\": \"deity\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

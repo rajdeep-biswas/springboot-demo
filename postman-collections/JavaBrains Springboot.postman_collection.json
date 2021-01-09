@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"scripting\",\r\n    \"desc\": \"gods\"\r\n}",
+					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"scripting\",\r\n    \"descr\": \"gods\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

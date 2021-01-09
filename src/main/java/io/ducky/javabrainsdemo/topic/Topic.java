@@ -1,17 +1,23 @@
 package io.ducky.javabrainsdemo.topic;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Topic {
+	
+	@Id
 	private String id;
 	private String name;
-	private String desc;
+	private String descr;
 	
 	public Topic() {}
 	
-	public Topic(String id, String name, String desc) {
-		super();
+	public Topic(String id, String name, String descr) {
+		// super();
 		this.id = id;
 		this.name = name;
-		this.desc = desc;
+		this.descr = descr;
 	}
 	
 	public String getId() {
@@ -26,10 +32,10 @@ public class Topic {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDesc() {
-		return desc;
+	public String getDescr() {
+		return descr;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescr(String descr) {
+		this.descr = descr;
 	}
 }

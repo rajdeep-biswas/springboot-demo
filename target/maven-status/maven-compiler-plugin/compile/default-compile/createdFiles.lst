@@ -1,8 +1,12 @@
 io\ducky\javabrainsdemo\topic\TopicController.class
+io\ducky\javabrainsdemo\course\CourseController.class
+io\ducky\javabrainsdemo\course\CourseRepository.class
 io\ducky\javabrainsdemo\nuts\NutController.class
 io\ducky\javabrainsdemo\hello\HelloController.class
 io\ducky\javabrainsdemo\nuts\Nut.class
 io\ducky\javabrainsdemo\ExcelAPIApp.class
 io\ducky\javabrainsdemo\topic\TopicService.class
 io\ducky\javabrainsdemo\topic\Topic.class
+io\ducky\javabrainsdemo\course\CourseService.class
+io\ducky\javabrainsdemo\course\Course.class
 io\ducky\javabrainsdemo\topic\TopicRepository.class

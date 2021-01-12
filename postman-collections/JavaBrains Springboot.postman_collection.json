@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "PUT (update topic)",
+			"name": "Update Topic by ID",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -41,7 +41,7 @@
 			"response": []
 		},
 		{
-			"name": "POST (add new topic)",
+			"name": "Add new Topic",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -53,7 +53,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"spring\",\r\n    \"name\": \"enterprise\",\r\n    \"descr\": \"deity\"\r\n}",
+					"raw": "{\r\n    \"id\": \"java-streams\",\r\n    \"name\": \"java streams\",\r\n    \"descr\": \"example\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +76,7 @@
 			"response": []
 		},
 		{
-			"name": "DELETE (delete topic)",
+			"name": "Delete Topic by Id",
 			"request": {
 				"method": "DELETE",
 				"header": [],
@@ -92,6 +92,109 @@
 					]
 				},
 				"description": "duh"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Courses by Topic ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": null,
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/topics/spring/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"spring",
+						"courses"
+					]
+				},
+				"description": "Replace x in topics/x/courses to get all courses under topic x."
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Topics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": null,
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/topics/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						""
+					]
+				},
+				"description": "duh"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Course under Topic by ID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"scripting\",\r\n    \"desc\": \"gods\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/topics/spring/courses",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topics",
+						"spring",
+						"courses"
+					]
+				},
+				"description": "Topic ID goes in URL, Course detail goes in body."
 			},
 			"response": []
 		}

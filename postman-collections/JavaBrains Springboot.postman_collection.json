@@ -6,19 +6,19 @@
 	},
 	"item": [
 		{
-			"name": "Update Topic by ID",
+			"name": "Update Topic",
 			"request": {
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"python\",\r\n    \"name\": \"tide\",\r\n    \"descr\": \"retard\"\r\n}",
+					"raw": "{\r\n    \"id\": \"java\",\r\n    \"name\": \"tide\",\r\n    \"descr\": \"retard\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,7 +36,7 @@
 						""
 					]
 				},
-				"description": "/topics/{id to be replaced}\r\n\r\nRequestBody - same as POST"
+				"description": "Updates Topic by Topic instance within body. ID in URL not required.\r\n\r\nRequestBody - same as POST"
 			},
 			"response": []
 		},
@@ -71,27 +71,27 @@
 						""
 					]
 				},
-				"description": "*Request Body* should be 'raw' and JSON formatted.\r\nAlso a *Header* of Content-Type: application/json has to be provided to specify what to expect."
+				"description": "Adds Topic by Topic instance within body. ID in URL not required.\r\n\r\n*Request Body* should be 'raw' and JSON formatted.\r\nAlso a *Header* of Content-Type: application/json has to be provided to specify what to expect."
 			},
 			"response": []
 		},
 		{
-			"name": "Delete Topic by Id",
+			"name": "Delete Topic",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/topics/js",
+					"raw": "localhost:8080/topics/java",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"topics",
-						"js"
+						"java"
 					]
 				},
-				"description": "duh"
+				"description": "ID passed in URL. No body required."
 			},
 			"response": []
 		},
@@ -163,7 +163,7 @@
 			"response": []
 		},
 		{
-			"name": "Add new Course under Topic by ID",
+			"name": "Add new Course",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -195,6 +195,44 @@
 					]
 				},
 				"description": "Topic ID goes in URL, Course detail goes in body."
+			},
+			"response": []
+		},
+		{
+			"name": "Send Excel",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/WORK/sample/excel.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/excel",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"excel"
+					]
+				}
 			},
 			"response": []
 		}

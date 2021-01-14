@@ -82,6 +82,7 @@ public class ExcelService {
 			}
 		    workbook.close();
 		    excelData = data;
+		    new File(filelocation).delete();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,6 +90,7 @@ public class ExcelService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 
 	public List<Object> returnJSON() {
@@ -105,6 +107,8 @@ public class ExcelService {
 				}
 			}
 		}
+		
+		
 		
 		return jsonData;
 	}
